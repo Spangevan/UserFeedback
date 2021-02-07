@@ -7,19 +7,19 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Table(name="feedback")
+@Table(name = "feedback")
 @Entity
 public class Feedback {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id")
 	private Long id;
-	
-	@Column(name="feedback")
+
+	@Column(name = "feedback")
 	private String feedback;
-	
-	@Column(name="raiting")
+
+	@Column(name = "rating")
 	private int rating;
 
 	public Long getId() {
@@ -48,9 +48,7 @@ public class Feedback {
 
 	@Override
 	public String toString() {
-		return "Feedback [id=" + id + ", feedback=" + feedback + ", rating=" + rating + "]";
+		return "Feedback [ Feedback id: " + id + ", User Feedback: " + feedback + ", Feedback Rating: " + rating + "]";
 	}
 
-	
-	
 }
